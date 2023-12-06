@@ -15,11 +15,17 @@
       </nav>
     </div>
     <div class="background_sign-up">
-      <form class="form" action="">
-        <input class="input" type="login" placeholder="Login" />
-        <input class="input" type="password" placeholder="Password" />
-        <button>Зарегистрироваться</button>
-      </form>
+      <div name="registration" class="form">
+        <input name="login" class="inputLog" type="login" placeholder="Login" />
+        <input
+          name="password"
+          class="inputPas"
+          type="password"
+          placeholder="Password"
+        />
+        <button onclick="handleRegister()">Зарегистрироваться</button>
+      </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
