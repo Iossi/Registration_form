@@ -1,42 +1,50 @@
 async function handleRegister() {
-  const loginValue = document.querySelector(".inputLog").value;
-  const passwordValue = document.querySelector(".inputPas").value;
-  const User = { username: loginValue, password: passwordValue };
-  let response = await fetch(
+  const username = document.querySelector(
+    "div[name=registration] input[name=login]"
+  ).value;
+  const password = document.querySelector(
+    "div[name=registration] input[name=password]"
+  ).value;
+  const response = await fetch(
     "https://testbackend-1-m4859670.deta.app/register",
     {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",
       },
-      body: JSON.stringify(User),
+      body: JSON.stringify({ username, password }),
     }
   );
   const data = await response.json();
-  if (data.success === true) {
+  if (data.success) {
     alert("Регистрация прошла успешно!");
     window.location.href = "sign-in.html";
   } else {
-    alert(`Ошибка : ${response.status} , причина: ${data.error}`);
+    alert(`Ошибка: ${response.status}, причина: ${data.error}`);
   }
 }
 
 async function handleLogin() {
-  const loginValue = document.querySelector(".inputlogEnter").value;
-  const passwordValue = document.querySelector(".inputpasEnter").value;
-  const User = { username: loginValue, password: passwordValue };
-  let response = await fetch("https://testbackend-1-m4859670.deta.app/login", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json;charset=utf-8",
-    },
-    body: JSON.stringify(User),
-  });
-  console.log(response);
+  const username = document.querySelector(
+    "div[name=authorization] input[name=login]"
+  ).value;
+  const password = document.querySelector(
+    "div[name=authorization] input[name=password]"
+  ).value;
+  const response = await fetch(
+    "https://testbackend-1-m4859670.deta.app/login",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json;charset=utf-8",
+      },
+      body: JSON.stringify({ username, password }),
+    }
+  );
   const data = await response.json();
-  if (response.ok) {
-    alert("Вы вошли на сервер");
+  if (data.success) {
+    alert("Вы успешно авторизовались");
   } else {
-    alert(`Ошибка : ${response.status} , причина: ${data.error}`);
+    alert(`Ошибка: ${response.status}, причина: ${data.error}`);
   }
 }
