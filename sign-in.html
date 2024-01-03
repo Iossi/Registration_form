@@ -6,24 +6,19 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="nav">
-      <nav>
-        <ul>
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="sign-up.html">Зарегистрироваться</a></li>
-        </ul>
-      </nav>
-    </div>
-    <div class="background_sign-in">
-      <div name="authorization" class="form">
-        <input name="login" class="input" type="login" placeholder="Login" />
+    <div style="height: 100vh; width: 100vw" class="background-wrapper">
+      <div style="width: 90%" name="authorization" class="sign-in-form">
+        <input name="loginEntry" class="input" placeholder="Login" />
         <input
-          name="password"
-          class="input"
+          name="passwordEntry"
           type="password"
+          class="input"
           placeholder="Password"
         />
-        <button onclick="handleLogin()">Войти</button>
+        <div>
+          <button class="button" onclick="handleLogin()">Sign-in</button>
+          <a href="sign-up.html"><button class="button">Sign-up</button></a>
+        </div>
       </div>
     </div>
     <script src="script.js"></script>

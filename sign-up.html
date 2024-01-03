@@ -4,28 +4,88 @@
     <title>Parcel Sandbox</title>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
-    <div class="nav">
-      <nav>
-        <ul>
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="sign-in.html">Войти</a></li>
-        </ul>
-      </nav>
-    </div>
-    <div class="background_sign-up">
-      <div name="registration" class="form">
-        <input name="login" class="input" type="login" placeholder="Login" />
-        <input
-          name="password"
-          class="input"
-          type="password"
-          placeholder="Password"
-        />
-        <button onclick="handleRegister()">Зарегистрироваться</button>
+    <div class="background-wrapper">
+      <div class="sign-up-form">
+        <h1>Welcome, let's create an account</h1>
+        <h2>
+          Create an account to keep track of your customers, and contributors.
+          Once your account has been created then don’t forget to verify your
+          account through mail.
+        </h2>
+        <div name="registration" class="form">
+          <div class="sign-up-form__input_name">
+            <label class="label">
+              First name
+          </label>
+            <input name="login" 
+            class="input" 
+            placeholder="Your first name" />
+
+            <label class="label">
+              Last name
+          </label>
+            <input
+              name="lastname"
+              class="input"
+              placeholder="Your Last name"
+            />
+          </div>
+          <div class="sign-up-form__infoblock">
+            <label class="label">
+              Work email
+          </label>
+            <input class="input" 
+            placeholder="Your work email" />
+            <label class="label">
+              Country
+            </label>
+            <select  name="country" class="input" /></select>
+            <label class="label">
+              Where did you first hear about us?
+            </label>
+            <select  class="input">
+              <option value="1">Select an option...</option>
+              <option value="2">Magazine</option>
+              <option value="3">Friends</option>
+              <option value="4">Tv</option>
+            </select>
+            <label class="label">
+              Password
+          </label>
+            <input 
+              class="input"
+              type="password"
+              name="password"
+              placeholder="Must be at least 8 characters"
+            />
+            
+          </div>
+          <span class="span"
+          >By continuing you agree <strong style="color: black;"> <span class="underlined">terms of service</span></strong> and
+          <strong style="color: black;"><span class="underlined">privacy policy.</span></strong></span>
+        </div>
+        <div class="button-block">
+          <button class="button" onclick="handleRegister()">Register</button>
+          <p style="font-family: Inter, sans-serif; font-size: 
+          14px;color:rgba(96, 103, 120, 1) ;">
+            Already registered?<a style="color:black" href="sign-in.html"
+              ><strong><span class="underlined">Sign in</span></strong></a
+            >
+          </p>
+        </div>
       </div>
     </div>
+
     <script src="script.js"></script>
+    <script src="scriptCountry.js"></script>
   </body>
 </html>
