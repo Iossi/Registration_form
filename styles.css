@@ -4,6 +4,9 @@
   box-sizing: border-box;
 }
 .sign-in-form {
+  background-color: #ffffff;
+  border-radius: 15.88px;
+  padding: 31px;
   display: flex;
   flex-direction: column;
 }
@@ -39,6 +42,9 @@
   flex-flow: column wrap;
   justify-content: space-around;
 }
+.sign-up-form__input_name input:first-of-type {
+  margin-right: 2%;
+}
 .sign-up-form__infoblock {
   width: auto;
   display: flex;
@@ -49,7 +55,6 @@
   border-radius: 6px;
   border-color: rgba(202, 208, 219, 1);
   height: 44px;
-  margin-right: 2%;
   margin-bottom: 20px;
   padding: 12px;
   color: rgba(96, 103, 120, 1);
@@ -61,6 +66,7 @@
   color: #ffffff;
   border-radius: 5px;
   margin-top: 10px;
+  margin-bottom: 12px;
 }
 .button-block {
   width: 100%;
@@ -69,8 +75,6 @@
   flex-direction: column;
   justify-content: end;
   align-items: flex-end;
-  margin-top: 2%;
-  margin-right: 2%;
 }
 h2 {
   font-family: "Inter", sans-serif;
@@ -100,6 +104,18 @@ h1 {
 .underlined {
   text-decoration: underline;
 }
+.button-block p {
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  color: rgba(123, 132, 153, 1);
+}
+.button-block a {
+  color: black;
+  margin-left: 4px;
+}
+.span strong {
+  color: black;
+}
 
 @media (max-width: 1200px) {
   .background-wrapper {
@@ -116,7 +132,6 @@ h1 {
   }
   .button-block {
     align-items: center;
-    margin-right: 0;
   }
   .button {
     min-width: 240.48px;
@@ -125,8 +140,5 @@ h1 {
   .sign-up-form__input_name {
     height: auto;
     flex-flow: column;
-  }
-  .input {
-    margin-right: 0;
   }
 }
